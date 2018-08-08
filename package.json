@@ -1,0 +1,17 @@
+{
+  "name": "zebra-printer-plugin",
+  "version": "0.0.1",
+  "description": "Zebra Printer Cordova Plugin for iOS",
+  "cordova": {
+    "id": "zebra-printer-plugin",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Tim Baker",
+  "license": ""
+}
