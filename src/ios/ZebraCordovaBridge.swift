@@ -63,7 +63,7 @@ class ZebraCordovaBridge: CDVPlugin {
 
   @objc func wifiSend(_ command: CDVInvokedUrlCommand) {
     let zpl = command.arguments[0] as? String ?? ""
-    wifi.send(zpl, success: { data in
+    wifi.send(zpl, success: {
       self.respond(.success(nil), for: command)
     }) { error in
       self.respond(.failure(error), for: command)
@@ -72,7 +72,7 @@ class ZebraCordovaBridge: CDVPlugin {
 
   @objc func wifiPrint(_ command: CDVInvokedUrlCommand) {
     let zpl = command.arguments[0] as? String ?? ""
-    wifi.print(zpl, success: { data in
+    wifi.print(zpl, success: {
       self.respond(.success(nil), for: command)
     }) { error in
       self.respond(.failure(error), for: command)
