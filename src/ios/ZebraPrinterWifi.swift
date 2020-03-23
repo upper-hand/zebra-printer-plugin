@@ -55,7 +55,7 @@ extension ZebraPrinterWifi {
         PrinterQueue.shared.async {
             let timeout = Int(responsesTimeout * 1000)
             let printers = (try? NetworkDiscoverer.localBroadcast(withTimeout: timeout)) as? [DiscoveredPrinter] ?? [] // use default timeout
-            let devices = printers.flatMap({ $0.address })
+            let devices = printers.compactMap({ $0.address })
             success(devices)
         }
     }
